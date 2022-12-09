@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {%  if request.user.is_authenticated %}
+    <h1>LOGADO COM SUCESSO</h1>
+    <a href="/logouts/">Sair</a>
+    {% else %}
+    <h1>VOCÊ NÃO TEM ACESSO À ESSA ÁREA!</h1>
+    {% endif %}
+{% endblock %}
